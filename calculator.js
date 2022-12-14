@@ -20,4 +20,4 @@ class Calculator {
     return number1 * number2;
   }
 }
-  export default calculator;
+  export default Calculator;

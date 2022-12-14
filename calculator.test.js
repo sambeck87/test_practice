@@ -1,9 +1,4 @@
-import calculator from "./calculator.js";
-
-const add = require('./calculator');
-const rest = require('./calculator');
-const mult = require('./calculator');
-const div = require('./calculator');
+import Calculator from "./calculator.js";
 
 //Arrange
 const message = {
@@ -12,6 +7,8 @@ const message = {
   multIncorrect: 'The multiplication is incorrect',
   divIncorrect: 'The division is incorrect',
 }
+
+const calculate = new Calculator;
 
 //Act
 const test1 = calculate.add(9, 7);
@@ -24,44 +21,44 @@ const test7 = calculate.div(150, 5);
 const test8 = calculate.div(24, 6);
 
 //Assert
-describe(calculatorTests, () => {
-  describe(sums, () => {
+describe('CalculatorTests', () => {
+  describe('sums', () => {
     test(message.addIncorrect, () => {
-      expect(test1.toBe(16))
+      expect(test1).toBe(16)
     });
 
     test(message.addIncorrect, () => {
-      expect(test2.toBe(27))
+      expect(test2).toBe(27)
     });
   });
 
-  describe(rests, () => {
+  describe('rests', () => {
     test(message.restIncorrect, () => {
-      expect(test3.toBe(5))
+      expect(test3).toBe(5)
     });
 
     test(message.restIncorrect, () => {
-      expect(test4.toBe(18))
+      expect(test4).toBe(18)
     });
   });
 
-  describe(multiplications, () => {
+  describe('multiplications', () => {
     test(message.multIncorrect, () => {
-      expect(test5.toBe(1000))
+      expect(test5).toBe(1000)
     });
 
     test(message.multIncorrect, () => {
-      expect(test6.toBe(120))
+      expect(test6).toBe(120)
     });
   });
 
-  describe(divisions, () => {
+  describe('divisions', () => {
     test(message.divIncorrect, () => {
-      expect(test7.toBe(30))
+      expect(test7).toBe(30)
     });
 
     test(message.divIncorrect, () => {
-      expect(test7.toBe(4))
+      expect(test8).toBe(4)
     });
   })
 });

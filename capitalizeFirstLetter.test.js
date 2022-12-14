@@ -6,9 +6,9 @@ const message = {
 };
 
 //Act 
-const string = capitalize('my name is moka');
+const string = capitalizeFirstLetter('my name is moka');
 
 //Assert
 test(message.containsCapitalLetter, () => {
-  expect(string.toBe('My name is moka'))
+  expect(string).toBe('My name is moka')
 });

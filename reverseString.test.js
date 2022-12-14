@@ -9,6 +9,6 @@ const message = {
 const test7 = reverseString('hello world');
 
 //Assert
-test(message.isNotInReverse, () => {
-  expect(test7.toBe('dlrow olleh'))
+it(message.isNotInReverse, () => {
+  expect(test7).toBe('dlrow olleh')
 });
